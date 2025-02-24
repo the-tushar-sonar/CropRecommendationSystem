@@ -1,9 +1,0 @@
-"Act as a senior full-stack developer. Design a detailed plan to build a 'Smart Laptop Advisor' platform for students.  
-Include:  
-1. Architecture diagram (frontend, backend, database, AI microservices).  
-2. Prioritized implementation steps (e.g., data collection → MVP with content filtering → collaborative filtering).  
-3. Code snippets for:  
-   - Web scraping laptops from Amazon using Scrapy.  
-   - Content-based recommendation logic in Python (Scikit-learn).  
-   - React.js form component for user inputs.  
-4. Mitigation strategies for challenges like data freshness or scalability."  
