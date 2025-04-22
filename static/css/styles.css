@@ -1,0 +1,240 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Orbitron:wght@400..900&family=Stalinist+One&family=Yatra+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Itim", 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    max-width: 750px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    /* font-family: "Stalinist One", sans-serif; */
+    font-family: "Orbitron", 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+}
+
+.tagline {
+    font-family: "Yatra One", 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.description {
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+a> .btn {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #45a049;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+
+/* Form Container */
+.auth-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.auth-container h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.auth-container button {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.auth-container button:hover {
+  background-color: #218838;
+}
+
+.auth-container p {
+  color: white;
+}
+
+.auth-container a {
+  color: #ffdd57;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.navbar h2 {
+  color: white;
+  margin: 0;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px;
+}
+
+.navbar-nav .btn {
+  border-radius: 5px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info span {
+  color: white;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background-color: red;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.logout-btn:hover {
+  background-color: darkred;
+}
+
+/* Form Container */
+.form-container, .result-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 350px;
+}
+
+.form-container h2, .result-container h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-container button {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.form-container button:hover {
+  background-color: #218838;
+}
+
+/* Result Page */
+.crop-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
