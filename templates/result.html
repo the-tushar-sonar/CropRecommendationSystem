@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <h2>Crop Recommendation</h2>
+        <div class="user-info">
+            {% if session['user_name'] %}
+                <span>Welcome, {{ session['user_name'] }}</span>
+                <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="result-container">
+        <h2>Recommended Crop</h2>
+        <p>The best crop to grow based on your input is:</p>
+        <h3>{{ crop }}</h3>
+
+        <img src="{{ url_for('static', filename='images/crops/' + crop.lower() + '.jpg') }}" alt="{{ crop }}" class="crop-image">
+        
+        <p><strong>Confidence Score:</strong> {{ confidence }}</p>
+
+        <a href="{{ url_for('form') }}" class="back-btn">Check Another Crop</a>
+    </div>
+</body>
+</html>

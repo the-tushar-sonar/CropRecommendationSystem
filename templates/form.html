@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crop Recommendation</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <h2><a href="{{ url_for('home') }}" style="color: white; text-decoration: none;">Crop Recommender</a></h2>
+        
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="{{ url_for('form') }}" style="color: white;">Prediction Form</a>
+        </div>
+    
+        <div class="user-info">
+            {% if current_user.is_authenticated %}
+                <span>Welcome, {{ current_user.name }}</span>
+                <a class="logout-btn" href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <a class="btn btn-success nav-link text-white" href="{{ url_for('login') }}">Login</a>
+                <a class="btn btn-primary nav-link text-white" href="{{ url_for('register') }}">Register</a>
+            {% endif %}
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <div class="form-container">
+        <h2>Enter Soil & Climate Data</h2>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <input type="number" name="N" placeholder="Nitrogen (0-140)" required>
+            <input type="number" name="P" placeholder="Phosphorus (5-145)" required>
+            <input type="number" name="K" placeholder="Potassium (5-205)" required>
+            <input type="number" step="0.1" name="temperature" placeholder="Temperature (°C)" required>
+            <input type="number" step="0.1" name="humidity" placeholder="Humidity (%)" required>
+            <input type="number" step="0.1" name="ph" placeholder="Soil pH (3.5-10)" required>
+            <input type="number" step="0.1" name="rainfall" placeholder="Rainfall (mm)" required>
+            <button type="submit">Predict Best Crop</button>
+        </form>
+    </div>
+</body>
+</html>
+
+    <!-- <h2>Crop Recommendation Form</h2>
+    <form action="{{ url_for('predict') }}" method="POST">
+        <label for="N">Nitrogen (N):</label>
+        <input type="number" name="N" min="0" max="140" required><br>
+    
+        <label for="P">Phosphorus (P):</label>
+        <input type="number" name="P" min="5" max="145" required><br>
+    
+        <label for="K">Potassium (K):</label>
+        <input type="number" name="K" min="5" max="205" required><br>
+    
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" step="0.01" name="temperature" min="8" max="44" required><br>
+    
+        <label for="humidity">Humidity (%):</label>
+        <input type="number" step="0.01" name="humidity" min="14" max="100" required><br>
+    
+        <label for="ph">pH:</label>
+        <input type="number" step="0.01" name="ph" min="3.5" max="10" required><br>
+    
+        <label for="rainfall">Rainfall (mm):</label>
+        <input type="number" step="0.01" name="rainfall" min="20" max="300" required><br>
+    
+        <button type="submit">Predict Crop</button>
+    </form> -->
+    
+</body>
+</html>
