@@ -38,32 +38,121 @@ h1 {
 }
 
 .tagline {
+    display: flex;
+    flex-direction: column;
     font-family: "Yatra One", 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 27px;
     font-weight: 300;
     margin: 10px 0;
     font-style: italic;
+    justify-self: center;
+    
+  }
+  .tagline .comma{
+    display: flex;
+  }
+  .tagline #one{
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .tagline #two{
+    display: flex;
+  }
+  .tagline div span{
+  /* background-color: #9dff0073; */
+  background-color: #0dc000;
 }
 
 .description {
-    font-size: 16px;
+    font-size: 20px;
     margin: 15px 0;
 }
 
-a> .btn {
-    display: inline-block;
-    background: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 25px;
-    transition: 0.3s;
+a {
+  text-decoration: none;
 }
 
-.btn:hover {
-    background: #45a049;
+/* Main explore button styling */
+.explore-button {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 0.5rem;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5rem 1rem;
+font-size: 1.125rem;
+width: fit-content; /* 🛠️ Fix full width issue */
+background-color: #f9fafb; /* bg-gray-50 */
+backdrop-filter: blur(8px);
+border: 2px solid #f9fafb; /* border-gray-50 */
+border-radius: 9999px;
+overflow: hidden;
+isolation: isolate;
+font-weight: 600;
+box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-xl */
+z-index: 10;
+cursor: pointer;
+color: #111827; /* 🛠️ Set visible dark text initially */
+text-decoration: none;
 }
+
+/* Before hover animation */
+.explore-button::before {
+content: "";
+position: absolute;
+top: 50%;
+left: -100%;
+width: 100%;
+aspect-ratio: 1 / 1;
+background-color: #0dc000; /* emerald green */
+border-radius: 9999px;
+transition: all 0.7s ease;
+z-index: -10;
+transform: scale(1);
+}
+
+/* Hover animation for button background */
+.explore-button:hover::before {
+left: 0;
+width: 100%;
+transform: scale(1.5);
+}
+
+/* Hover text color */
+.explore-button:hover {
+color: #f9fafb; /* text turns white on hover */
+}
+
+/* Explore icon inside the button */
+.explore-icon {
+width: 2rem;
+height: 2rem;
+padding: 0.5rem;
+border: 1px solid #374151;
+border-radius: 9999px;
+background: transparent;
+transform: rotate(45deg);
+transition: all 0.3s ease;
+object-fit: contain;
+}
+
+/* Icon hover effect */
+.explore-button:hover .explore-icon {
+transform: rotate(90deg);
+background-color: #f9fafb;
+border: none;
+}
+
+/* Explore text styling */
+.explore-text {
+text-decoration: none;
+}
+
+
+
+
 
 .footer {
     margin-top: 15px;
@@ -83,45 +172,97 @@ a> .btn {
   width: 300px;
 }
 
+/* Heading */
 .auth-container h2 {
   color: #fff;
   margin-bottom: 15px;
 }
 
-.auth-container input {
+/* Inputs */
+.auth-container form input {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* soft border */
+  background: rgba(255, 255, 255, 0.15); /* semi-transparent background */
+  color: white;
   border-radius: 5px;
   font-size: 16px;
+  outline: none;
+  transition: border 0.3s, background-color 0.3s;
 }
 
-.auth-container button {
+/* Input focus effect */
+.auth-container form input:focus {
+  border: 1px solid #0dc000;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Button */
+.login-button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  background-color: #28a745;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
   margin-top: 10px;
+  padding: 0.5rem 1rem;
   font-size: 18px;
+  font-weight: 600;
+  background-color: #f9fafb; /* light background */
+  color: #000; /* text black initially */
+  backdrop-filter: blur(8px);
+  border: 2px solid #f9fafb;
+  border-radius: 9999px;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.auth-container button:hover {
-  background-color: #218838;
+/* Hover Effect Layer */
+.login-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #0dc000; /* bright green */
+  border-radius: 9999px;
+  transition: all 0.7s ease;
+  z-index: -10;
+  transform: scale(1);
 }
 
+/* On Hover - Move & Expand Background */
+.login-button:hover::before {
+  left: 0;
+  width: 100%;
+  transform: scale(1.5);
+}
+
+/* On Hover - Text color */
+.login-button:hover {
+  color: #f9fafb; /* white text on hover */
+}
+
+
+/* Paragraph text */
 .auth-container p {
   color: white;
+  margin-top: 15px;
 }
 
+/* Links */
 .auth-container a {
   color: #ffdd57;
   text-decoration: none;
 }
 
+/* Link hover */
 .auth-container a:hover {
   text-decoration: underline;
 }
