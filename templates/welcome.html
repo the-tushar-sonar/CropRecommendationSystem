@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop Recommendation System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 
 </head>
+
 <body>
 
     <div class="container">
         <div class="content">
             <h1>Crop Recommendation System</h1>
-            <p class="tagline">🌿 <i>Sow the Right Crop, <br> Reap the Best Harvest</i> 🌿</p>
+            <div class="tagline">
+                <div class="comma">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div id="one">
+                    &emsp;  <span>&nbsp;Sow the Right Crop&nbsp;</span>&comma;
+                </div>
+                <div id="two">
+                    &emsp;&emsp;&emsp;<span>&nbsp;Reap the Best Harvest&nbsp;</span>&nbsp;
+                </div>
+
+                <div class="comma">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+            </div>
             <p class="description">
-                🌟 Smart AI-powered crop recommendations to help you maximize yield, minimize risk, and make the best farming decisions effortlessly.
+                🌟 Smart AI-powered crop recommendations to help you maximize yield, minimize risk, and make the best
+                farming decisions effortlessly.
             </p>
-            <a  href="{{ url_for('form') if current_user.is_authenticated else url_for('login') }}">
-                <button class="btn">Find The Best Crop</button>
+            <a href="{{ url_for('form') if current_user.is_authenticated else url_for('login') }}" class="explore-button">
+                <span class="explore-text">Find the Best Crop</span>
+                <img src="{{ url_for('static', filename='images/explore-icon.svg') }}" class="explore-icon" alt="Explore Icon" />
             </a>
             
+
+            
+              
+
             <p class="footer">Model - Random Forest Classifier <br> Created By - <b>Tushar P. Sonar</b></p>
         </div>
     </div>
 
 </body>
+
 </html>
