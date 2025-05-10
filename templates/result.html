@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction Result</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
+
 <body>
-    <div class="navbar">
-        <h2>Crop Recommendation</h2>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2><a href="{{ url_for('home') }}" style="color: white; text-decoration: none;">Crop Recommender</a></h2>
+
         <div class="user-info">
-            {% if session['user_name'] %}
-                <span>Welcome, {{ session['user_name'] }}</span>
-                <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+            {% if current_user.is_authenticated %}
+            <span>{{ current_user.name }}</span>
+            <a class="logout-btn" href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+            <a class="btn btn-success nav-link text-white" href="{{ url_for('login') }}">Login</a>
+            <a class="btn btn-primary nav-link text-white" href="{{ url_for('register') }}">Register</a>
             {% endif %}
         </div>
-    </div>
+    </nav>
 
     <div class="result-container">
         <h2>Recommended Crop</h2>
         <p>The best crop to grow based on your input is:</p>
         <h3>{{ crop }}</h3>
 
-        <img src="{{ url_for('static', filename='images/crops/' + crop.lower() + '.jpg') }}" alt="{{ crop }}" class="crop-image">
-        
+        <img src="{{ url_for('static', filename='images/crops/' + crop.lower() + '.jpg') }}" alt="{{ crop }}"
+            class="crop-image">
+
         <p><strong>Confidence Score:</strong> {{ confidence }}</p>
 
         <a href="{{ url_for('form') }}" class="back-btn">Check Another Crop</a>
     </div>
 </body>
+
 </html>
