@@ -27,14 +27,14 @@
                 </div>
 
                 <div class="comma">
-                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                     <i class="fa-solid fa-quote-right"></i>
                 </div>
             </div>
-            <p class="description">
+            <div class="description">
                 🌟 Smart AI-powered crop recommendations to help you maximize yield, minimize risk, and make the best
                 farming decisions effortlessly.
-            </p>
+            </div>
             <a href="{{ url_for('form') if current_user.is_authenticated else url_for('login') }}" class="explore-button">
                 <span class="explore-text">Find the Best Crop</span>
                 <img src="{{ url_for('static', filename='images/explore-icon.svg') }}" class="explore-icon" alt="Explore Icon" />
