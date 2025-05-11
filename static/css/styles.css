@@ -26,16 +26,14 @@ body {
   border-radius: 15px;
   text-align: center;
   color: white;
-  max-width: 750px;
+  max-width: 850px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
-  /* font-family: "Stalinist One", sans-serif; */
   font-family: "Orbitron", 'Poppins', sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  /* text-transform: uppercase; */
+  font-size: 48px;
+  font-weight: 800;
 }
 
 .tagline {
@@ -44,10 +42,9 @@ h1 {
   font-family: "Itim", 'Poppins', sans-serif;
   font-size: 27px;
   font-weight: 300;
-  margin: 10px 0;
+  margin-top: 30px;
   font-style: italic;
   justify-self: center;
-
 }
 
 .tagline .comma {
@@ -64,20 +61,21 @@ h1 {
 }
 
 .tagline div span {
-  /* background-color: #9dff0073; */
   background-color: #0dc000;
 }
 
 .description {
+  max-width: 650px;
+  justify-self: center;
   font-size: 20px;
-  margin: 15px 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 a {
   text-decoration: none;
 }
 
-/* Main explore button styling */
 .explore-button {
   position: relative;
   display: flex;
@@ -89,27 +87,20 @@ a {
   padding: 0.5rem 1rem;
   font-size: 1.125rem;
   width: fit-content;
-  /* 🛠️ Fix full width issue */
   background-color: #f9fafb;
-  /*bg-gray-50*/
-  /*background-color: #0dc000; /* emerald green */
   backdrop-filter: blur(8px);
   border: 2px solid #f9fafb;
-  /* border-gray-50 */
   border-radius: 9999px;
   overflow: hidden;
   isolation: isolate;
   font-weight: 600;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  /* shadow-xl */
   z-index: 10;
   cursor: pointer;
   color: #111827;
-  /*🛠️ Set visible dark text initially */
   text-decoration: none;
 }
 
-/* Before hover animation */
 .explore-button::before {
   content: "";
   position: absolute;
@@ -118,27 +109,22 @@ a {
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: #0dc000c2;
-  /* emerald green */
   border-radius: 9999px;
   transition: all 0.7s ease;
   z-index: -10;
   transform: scale(1);
 }
 
-/* Hover animation for button background */
 .explore-button:hover::before {
   left: 0;
   width: 100%;
   transform: scale(1.5);
 }
 
-/* Hover text color */
 .explore-button:hover {
   color: #f9fafb;
-  /* text turns white on hover */
 }
 
-/* Explore icon inside the button */
 .explore-icon {
   width: 2rem;
   height: 2rem;
@@ -151,83 +137,69 @@ a {
   object-fit: contain;
 }
 
-/* Icon hover effect */
 .explore-button:hover .explore-icon {
   transform: rotate(90deg);
   background-color: #f9fafb;
   border: none;
 }
 
-/* Explore text styling */
 .explore-text {
   text-decoration: none;
 }
 
-
-
-
-
 .footer {
-  margin-top: 15px;
+  margin-top: 30px;
   font-size: 14px;
   opacity: 0.8;
 }
 
-
-
-/* Form Container */
 .auth-container {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  padding: 20px;
+  padding: 40px 30px;
   border-radius: 10px;
   text-align: center;
-  width: 300px;
+  width: 350px;
 }
 
-/* Heading */
-.auth-container h2 {
+.auth-container h2,
+.form-container h2,
+.result-container h2 {
   font-family: "Orbitron", 'Poppins', sans-serif;
-  font-size: 30px;
+  font-size: 34px;
+  font-weight: 800;
   color: #fff;
-  margin-bottom: 15px;
+  margin: 0 10px 30px 10px;
 }
 
-/* Inputs */
+.form-container form{
+  margin-top: 10px; 
+}
+
 .auth-container form input,
 .form-container input {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
+  padding: 8px 10px;
+  margin: 5px 0;
   border: 2px solid #ffffff80;
-  /* soft border */
   background: rgba(255, 255, 255, 0.75);
-  /* semi-transparent background */
-  /* color: white; */
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 16px;
   outline: none;
   transition: border 0.3s, background-color 0.3s;
 }
 
-/* Input focus effect */
 .auth-container form input:focus,
 .form-container input:focus {
   background: rgba(255, 255, 255, 0.15);
-  /* darker background on focus */
   border: 2px solid #0dc000;
 }
 
-/* Input focus effect */
 .auth-container form input:not(:focus),
 .form-container input:focus {
   background: rgba(255, 255, 255, 0.15);
-  /* darker background on focus */
-
 }
 
-
-/* Button */
 .login-button,
 .form-container button {
   position: relative;
@@ -235,14 +207,12 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 0.5rem 1rem;
   font-size: 18px;
   font-weight: 600;
   background-color: #f9fafb;
-  /* light background */
   color: #000;
-  /* text black initially */
   backdrop-filter: blur(8px);
   border: 2px solid #f9fafb;
   border-radius: 9999px;
@@ -254,7 +224,6 @@ a {
   transition: color 0.3s ease;
 }
 
-/* Hover Effect Layer */
 .login-button::before,
 .form-container button::before {
   content: "";
@@ -264,14 +233,12 @@ a {
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: #0dc000;
-  /* bright green */
   border-radius: 9999px;
   transition: all 0.7s ease;
   z-index: -10;
   transform: scale(1);
 }
 
-/* On Hover - Move & Expand Background */
 .login-button:hover::before,
 .form-container button:hover::before {
   left: 0;
@@ -279,33 +246,25 @@ a {
   transform: scale(1.5);
 }
 
-/* On Hover - Text color */
 .login-button:hover,
 .form-container button:hover {
   color: #f9fafb;
-  /* white text on hover */
 }
 
-
-/* Paragraph text */
 .auth-container p {
   color: white;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
-/* Links */
 .auth-container a {
   color: #ffdd57;
   text-decoration: none;
 }
 
-/* Link hover */
 .auth-container a:hover {
   text-decoration: underline;
 }
 
-
-/* Navbar */
 .navbar {
   position: absolute;
   top: 10px;
@@ -313,10 +272,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 30px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  /* background: rgba(0, 0, 0, 0.5); */
   border-radius: 100px;
 }
 
@@ -327,7 +285,6 @@ a {
 
 .navbar h2 a {
   font-family: "Orbitron", 'Poppins', sans-serif;
-
 }
 
 .navbar-nav .nav-item {
@@ -349,33 +306,16 @@ a {
   text-transform: uppercase;
 }
 
-/* .logout-btn {
-  background-color: red;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.logout-btn:hover {
-  background-color: darkred;
-} */
-/* Button */
 .logout-btn {
   position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
-  /* margin-top: 10px;   */
   padding: 0.5rem 1.025rem;
   font-size: 15px;
   font-weight: 600;
   background-color: #f9fafb;
-  /* light background */
   color: #000;
-  /* text black initially */
   backdrop-filter: blur(8px);
   border: 2px solid #f9fafb;
   border-radius: 100px;
@@ -387,7 +327,6 @@ a {
   transition: color 0.3s ease;
 }
 
-/* Hover Effect Layer */
 .logout-btn::before {
   content: "";
   position: absolute;
@@ -396,84 +335,57 @@ a {
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: red;
-  /* bright green */
   border-radius: 9999px;
   transition: all 0.7s ease;
   z-index: -10;
   transform: scale(1);
 }
 
-/* On Hover - Move & Expand Background */
 .logout-btn:hover::before {
   left: 0;
   width: 100%;
   transform: scale(1.5);
 }
 
-/* On Hover - Text color */
 .logout-btn:hover {
   color: #f9fafb;
-  /* white text on hover */
 }
 
-/* Form Container */
 .form-container,
 .result-container {
 
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   text-align: center;
   color: white;
-  /* width: 350px; */
 }
 
 .form-container form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 3 equal columns */
   gap: 10px;
-  /* space between grid items */
   padding: 20px;
-  /* flex-direction: column; */
   align-items: center;
 }
 
-.form-container h2,
-.result-container h2 {
-  color: white;
-  margin-bottom: 15px;
-  font-family: "Orbitron", 'Poppins', sans-serif;
-  font-size: 30px;
-}
 
 
 .form-container button {
   width: 100%;
-  /* background-color: #28a745;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-  font-size: 18px; */
-  width: 50%;
+  width: 222px;
   grid-column: 1 / -1;
-  /* Span full width */
   justify-self: center;
-  /* Center the button */
 }
 
-/* .form-container button:hover {
-  background-color: #218838;
-} */
-
-/* Result Page */
-.result-container h3{
+.result-container p{
+  margin-bottom: 10px;
+}
+.result-container h3 {
   text-transform: uppercase;
 }
+
 .crop-image {
   width: 100%;
   max-width: 200px;
@@ -482,21 +394,17 @@ a {
   margin: 10px 0;
 }
 
-/* Button */
 .back-btn {
   position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
   margin-top: 10px;
   padding: 10px 15px;
   font-size: 15px;
   font-weight: 600;
   background-color: #f9fafb;
-  /* light background */
   color: #000;
-  /* text black initially */
   backdrop-filter: blur(8px);
   border: 2px solid #f9fafb;
   border-radius: 100px;
@@ -508,7 +416,6 @@ a {
   transition: color 0.3s ease;
 }
 
-/* Hover Effect Layer */
 .back-btn::before {
   content: "";
   position: absolute;
@@ -517,22 +424,18 @@ a {
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: #007bff;
-  /* bright green */
   border-radius: 9999px;
   transition: all 0.7s ease;
   z-index: -10;
   transform: scale(1);
 }
 
-/* On Hover - Move & Expand Background */
 .back-btn:hover::before {
   left: 0;
   width: 100%;
   transform: scale(1.5);
 }
 
-/* On Hover - Text color */
 .back-btn:hover {
-  color: #f9fafb;
-  /* white text on hover */
+  color: #f9fafb; 
 }
