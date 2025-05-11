@@ -90,6 +90,25 @@ The system database involves **four main tables**:
 
 ---
 
+## 🖼️ Screenshots
+
+### 🔹 Home Page
+![Home Page](static/images/screenshot/welcome.png)
+
+### 🔹 Login Page
+![Home Page](static/images/screenshot/login.png)
+
+### 🔹 Register Page
+![Home Page](static/images/screenshot/register.png)
+
+### 🔹 Prediction Form
+![Form Page](static/images/screenshot/form.png)
+
+### 🔹 Result Page
+![Result Page](static/images/screenshot/result.png)
+
+---
+
 ## 📖 References
 
 - [GeeksforGeeks: Crop Recommendation System](https://www.geeksforgeeks.org/crop-recommendation-system-using-tensorflow/)
@@ -104,4 +123,4 @@ The system database involves **four main tables**:
 ---
 
 # ✅ Project Status
-**Completed successfully and ready for real-world deployment after minor UI polishing if needed.**
+**Completed successfully and ready for real-world deployment.**
