@@ -124,3 +124,121 @@ The system database involves **four main tables**:
 
 # ✅ Project Status
 **Completed successfully and ready for real-world deployment.**
+
+---
+
+# 📝 Setup 
+
+This guide will help you set up and run the **Crop Recommendation System** on a new system (Windows + SQLite).
+
+---
+
+## 1. Prerequisites
+
+### A. Install Python
+
+* Download from: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+* During setup, **check** "Add Python to PATH"
+
+### B. (Optional) Install Git
+
+* Download: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+
+---
+
+## 2. Download the Project
+
+### A. Using Git:
+
+```bash
+git clone https://github.com/YourUsername/CropRecommendationSystem.git
+cd CropRecommendationSystem
+```
+
+### B. Or Download ZIP:
+
+* Extract to your desired location
+
+---
+
+## 3. Create a Virtual Environment (Optional)
+
+```bash
+python -m venv venv
+venv\Scripts\activate  # Windows
+```
+
+---
+
+## 4. Install Requirements
+
+Ensure `requirements.txt` exists in your root folder. Then run:
+
+```bash
+pip install -r requirements.txt
+```
+
+If not available, manually install:
+
+```bash
+pip install flask flask_sqlalchemy flask_login pandas numpy scikit-learn
+```
+
+---
+
+## 5. Project Structure
+
+Make sure your folder looks like this:
+
+```
+CropRecommendationSystem/
+├── app.py
+├── models.py
+├── crop_recommendation_model.pkl
+├── crop_recommendation_scaler.pkl
+├── requirements.txt
+├── templates/
+├── static/
+│   ├── css/
+│   └── images/crops/
+└── instance/ (auto created)
+```
+
+---
+
+## 6. Initialize the Database
+
+Run:
+
+```bash
+python app.py
+```
+
+This will create `database.db` automatically.
+
+Open browser:
+
+```
+http://127.0.0.1:5007/
+```
+
+---
+
+## 7. View the Database (Optional)
+
+* Install **DB Browser for SQLite**: [https://sqlitebrowser.org/](https://sqlitebrowser.org/)
+
+---
+
+## 8. Deployment Tips
+
+* Don’t upload `venv/` or `.db` to GitHub
+* Use `.gitignore` to exclude unwanted files
+* Keep your `app.secret_key` secure
+
+---
+
+## Done!
+
+You're now ready to run and test the Crop Recommendation System on any Windows machine!
+
