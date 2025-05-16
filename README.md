@@ -123,7 +123,7 @@ The system database involves **four main tables**:
 ---
 
 # ✅ Project Status
-**Completed successfully and you can preview on [Replit🔗](https://replit.com/@3512Sonar/CropRecommendationSystem)**
+### Completed successfully and you can preview it on [Replit🔗](https://replit.com/@3512Sonar/CropRecommendationSystem) 
 
 ---
 
